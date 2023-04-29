@@ -1,12 +1,13 @@
 <template>
   <div>
     <h2>Today's List</h2>
-    <ul>
+    <ul v-if="filteredTasks.length > 0">
       <li v-for="(task, index) in filteredTasks" :key="index" :class="{ completed: task.completed }">
         <span>{{ task.text }}</span>
         <button @click="completeTask(index)">Complete</button>
       </li>
     </ul>
+    <p v-else> Add a task to your CheckMate list to get started. </p>
     <form @submit.prevent="addTask">
       <label for="newTask">Add new task:</label>
       <input type="text" id="newTask" v-model="newTaskText">
@@ -46,7 +47,6 @@ export default {
   },
 };
 </script>
-
 <style scoped>
 .completed {
   text-decoration: line-through;
