@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>My App Footer</h1>
+    <h1>© 2023 CheckMate. All Rights Reserved.</h1>
   </div>
 </template>
 

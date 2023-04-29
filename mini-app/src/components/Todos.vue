@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>My Todo List</h2>
+    <h2>Today's List</h2>
     <ul>
       <li v-for="(task, index) in tasks" :key="index" :class="{ completed: task.completed }">
         <span>{{ task.text }}</span>

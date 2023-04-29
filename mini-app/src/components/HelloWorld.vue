@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Hello World!</h1>
+    <h1>Get more done with our powerful to-do list app</h1>
   </div>
 </template>
 
