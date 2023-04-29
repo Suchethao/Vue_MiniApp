@@ -2,7 +2,7 @@
   <div>
     <h2>Today's List</h2>
     <ul>
-      <li v-for="(task, index) in tasks" :key="index" :class="{ completed: task.completed }">
+      <li v-for="(task, index) in filteredTasks" :key="index" :class="{ completed: task.completed }">
         <span>{{ task.text }}</span>
         <button @click="completeTask(index)">Complete</button>
       </li>
@@ -37,6 +37,11 @@ export default {
     },
     completeTask(index) {
       this.tasks[index].completed = true;
+    },
+  },
+  computed: {
+    filteredTasks() {
+      return this.tasks.filter((task) => !task.completed);
     },
   },
 };
